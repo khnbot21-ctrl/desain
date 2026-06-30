@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="body_z-up">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0668 0.081638 0.017827"
+        rpy="0 0 0" />
+      <mass
+        value="0.13141" />
+      <inertia
+        ixx="0.00011921"
+        ixy="2.0298E-09"
+        ixz="1.4027E-11"
+        iyy="5.3713E-05"
+        iyz="-2.2449E-07"
+        izz="0.00016762" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="cdk">
+    <inertial>
+      <origin
+        xyz="0.010586 0.011321 -0.021091"
+        rpy="0 0 0" />
+      <mass
+        value="0.0096676" />
+      <inertia
+        ixx="9.984E-07"
+        ixy="4.4002E-08"
+        ixz="-9.9419E-10"
+        iyy="1.0049E-06"
+        iyz="-1.0598E-09"
+        izz="9.5797E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/cdk.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.5 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/cdk.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cdk_joint"
+    type="revolute">
+    <origin
+      xyz="0.10945 0.012591 0.03934"
+      rpy="0 0 -1.5658" />
+    <parent
+      link="base_link" />
+    <child
+      link="cdk" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1"
+      velocity="2" />
+  </joint>
+  <link
+    name="fdk">
+    <inertial>
+      <origin
+        xyz="0.019622 -0.00753 0.023344"
+        rpy="0 0 0" />
+      <mass
+        value="0.022781" />
+      <inertia
+        ixx="1.4347E-06"
+        ixy="1.6445E-06"
+        ixz="4.338E-13"
+        iyy="5.1846E-06"
+        iyz="-1.1036E-13"
+        izz="5.8654E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/fdk.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.5 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/fdk.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fdk_joint"
+    type="revolute">
+    <origin
+      xyz="0.037781 0.0084286 -0.021466"
+      rpy="-1.5708 0 0.81491" />
+    <parent
+      link="cdk" />
+    <child
+      link="fdk" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1"
+      velocity="2" />
+  </joint>
+  <link
+    name="tdk">
+    <inertial>
+      <origin
+        xyz="-7.8386E-05 0.0429 0.0244"
+        rpy="0 0 0" />
+      <mass
+        value="0.010382" />
+      <inertia
+        ixx="3.5254E-06"
+        ixy="-1.007E-09"
+        ixz="-2.6698E-11"
+        iyy="9.1297E-07"
+        iyz="4.9746E-09"
+        izz="2.7173E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/tdk.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/tdk.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tdk_joint"
+    type="revolute">
+    <origin
+      xyz="0.039845 -0.01507 0"
+      rpy="0 0 0" />
+    <parent
+      link="fdk" />
+    <child
+      link="tdk" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1"
+      velocity="2" />
+  </joint>
+  <link
+    name="ctk">
+    <inertial>
+      <origin
+        xyz="6.2555E-05 0.015499 -0.021121"
+        rpy="0 0 0" />
+      <mass
+        value="0.0096676" />
+      <inertia
+        ixx="9.5756E-07"
+        ixy="1.2127E-10"
+        ixz="-1.4583E-14"
+        iyy="1.0457E-06"
+        iyz="7.9151E-11"
+        izz="9.58E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ctk.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.5 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ctk.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ctk_joint"
+    type="revolute">
+    <origin
+      xyz="0.1236 0.081448 0.03934"
+      rpy="0 0 -1.5658" />
+    <parent
+      link="base_link" />
+    <child
+      link="ctk" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1"
+      velocity="2" />
+  </joint>
+  <link
+    name="ftk">
+    <inertial>
+      <origin
+        xyz="0.019583 -0.0079205 -0.023247"
+        rpy="0 0 0" />
+      <mass
+        value="0.022781" />
+      <inertia
+        ixx="1.5387E-06"
+        ixy="1.7554E-06"
+        ixz="-2.1468E-08"
+        iyy="5.0807E-06"
+        iyz="8.7104E-09"
+        izz="5.8653E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ftk.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.5 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ftk.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ftk_joint"
+    type="revolute">
+    <origin
+      xyz="-0.021711 0.031943 -0.021572"
+      rpy="-1.5708 0 1.5658" />
+    <parent
+      link="ctk" />
+    <child
+      link="ftk" />
+    <axis
+      xyz="-0.0049617 0 0.99999" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1"
+      velocity="2" />
+  </joint>
+  <link
+    name="ttk">
+    <inertial>
+      <origin
+        xyz="0.00014958 0.043171 -0.024404"
+        rpy="0 0 0" />
+      <mass
+        value="0.010382" />
+      <inertia
+        ixx="3.5254E-06"
+        ixy="-9.6502E-10"
+        ixz="3.983E-09"
+        iyy="9.1297E-07"
+        iyz="-4.8759E-09"
+        izz="2.7173E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ttk.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ttk.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ttk_joint"
+    type="revolute">
+    <origin
+      xyz="0.039381 -0.016245 0.00019539"
+      rpy="0 0 0" />
+    <parent
+      link="ftk" />
+    <child
+      link="ttk" />
+    <axis
+      xyz="-0.0049617 0 0.99999" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1"
+      velocity="2" />
+  </joint>
+  <link
+    name="cbk">
+    <inertial>
+      <origin
+        xyz="-0.011402 0.010498 -0.021121"
+        rpy="0 0 0" />
+      <mass
+        value="0.0096676" />
+      <inertia
+        ixx="1.0061E-06"
+        ixy="-4.3875E-08"
+        ixz="-5.844E-11"
+        iyy="9.9718E-07"
+        iyz="5.3354E-11"
+        izz="9.58E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/cbk.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.5 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/cbk.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cbk_joint"
+    type="revolute">
+    <origin
+      xyz="0.10945 0.1503 0.03934"
+      rpy="0 0 -1.5658" />
+    <parent
+      link="base_link" />
+    <child
+      link="cbk" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1"
+      velocity="2" />
+  </joint>
+  <link
+    name="fbk">
+    <inertial>
+      <origin
+        xyz="0.019702 -0.0073173 -0.023344"
+        rpy="0 0 0" />
+      <mass
+        value="0.022781" />
+      <inertia
+        ixx="1.4024E-06"
+        ixy="1.6072E-06"
+        ixz="1.7504E-13"
+        iyy="5.2169E-06"
+        iyz="-1.1949E-13"
+        izz="5.8654E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/fbk.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.5 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/fbk.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fbk_joint"
+    type="revolute">
+    <origin
+      xyz="-0.038308 0.0055839 -0.021851"
+      rpy="-1.5708 0 2.4015" />
+    <parent
+      link="cbk" />
+    <child
+      link="fbk" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1"
+      velocity="2" />
+  </joint>
+  <link
+    name="tbk">
+    <inertial>
+      <origin
+        xyz="-7.7052E-05 0.0429 -0.024405"
+        rpy="0 0 0" />
+      <mass
+        value="0.010382" />
+      <inertia
+        ixx="3.5254E-06"
+        ixy="-9.9081E-10"
+        ixz="-2.6697E-11"
+        iyy="9.1297E-07"
+        iyz="-4.871E-09"
+        izz="2.7173E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/tbk.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/tbk.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tbk_joint"
+    type="revolute">
+    <origin
+      xyz="0.0400060839143754 -0.0146380747215667 0"
+      rpy="0 0 0" />
+    <parent
+      link="fbk" />
+    <child
+      link="tbk" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1"
+      velocity="2" />
+  </joint>
+  <link
+    name="cdr">
+    <inertial>
+      <origin
+        xyz="0.011179 -0.010735 -0.021121"
+        rpy="0 0 0" />
+      <mass
+        value="0.0096676" />
+      <inertia
+        ixx="1.0037E-06"
+        ixy="-4.4032E-08"
+        ixz="5.7304E-11"
+        iyy="9.9958E-07"
+        iyz="-5.4566E-11"
+        izz="9.58E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/cdr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.5 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/cdr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cdr_joint"
+    type="revolute">
+    <origin
+      xyz="0.024148 0.012591 0.03934"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="cdr" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1"
+      velocity="2" />
+  </joint>
+  <link
+    name="fdr">
+    <inertial>
+      <origin
+        xyz="0.019544 0.0077314 0.023344"
+        rpy="0 0 0" />
+      <mass
+        value="0.022781" />
+      <inertia
+        ixx="1.4719E-06"
+        ixy="-1.6859E-06"
+        ixz="2.0453E-14"
+        iyy="5.1474E-06"
+        iyz="-6.3369E-14"
+        izz="5.8654E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/fdr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.5 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/fdr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fdr_joint"
+    type="revolute">
+    <origin
+      xyz="0.038184 -0.0063887 -0.02185"
+      rpy="1.5708 0 -0.76111" />
+    <parent
+      link="cdr" />
+    <child
+      link="fdr" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1"
+      velocity="2" />
+  </joint>
+  <link
+    name="tdr">
+    <inertial>
+      <origin
+        xyz="-7.9929E-05 -0.042901 0.024405"
+        rpy="0 0 0" />
+      <mass
+        value="0.010382" />
+      <inertia
+        ixx="3.5254E-06"
+        ixy="9.9067E-10"
+        ixz="2.669E-11"
+        iyy="9.1297E-07"
+        iyz="-4.871E-09"
+        izz="2.7173E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/tdr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/tdr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tdr_joint"
+    type="revolute">
+    <origin
+      xyz="0.039688 0.015479 0"
+      rpy="0 0 0" />
+    <parent
+      link="fdr" />
+    <child
+      link="tdr" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1"
+      velocity="2" />
+  </joint>
+  <link
+    name="ctr">
+    <inertial>
+      <origin
+        xyz="6.254E-05 -0.015499 -0.021091"
+        rpy="0 0 0" />
+      <mass
+        value="0.0096676" />
+      <inertia
+        ixx="9.5755E-07"
+        ixy="-4.1169E-10"
+        ixz="-3.5032E-12"
+        iyy="1.0458E-06"
+        iyz="1.4531E-09"
+        izz="9.5797E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ctr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.5 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ctr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ctr_joint"
+    type="revolute">
+    <origin
+      xyz="0.0100000061122792 0.0814476249955768 0.0393400002384186"
+      rpy="0 0 -1.55132271596475" />
+    <parent
+      link="base_link" />
+    <child
+      link="ctr" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1"
+      velocity="2" />
+  </joint>
+  <link
+    name="ftr">
+    <inertial>
+      <origin
+        xyz="0.019453 0.006727 -0.023728"
+        rpy="0 0 0" />
+      <mass
+        value="0.022781" />
+      <inertia
+        ixx="1.3383E-06"
+        ixy="-1.5256E-06"
+        ixz="8.8177E-08"
+        iyy="5.2828E-06"
+        iyz="2.9716E-08"
+        izz="5.8637E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ftr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.5 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ftr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ftr_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0217105423481277 -0.0319467536057447 -0.0211842510913956"
+      rpy="1.57079630717727 0 -1.59026993762504" />
+    <parent
+      link="ctr" />
+    <child
+      link="ftr" />
+    <axis
+      xyz="0.0194736704471767 0 0.999810370099907" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1"
+      velocity="2" />
+  </joint>
+  <link
+    name="ttr">
+    <inertial>
+      <origin
+        xyz="-0.00045476 -0.043174 -0.024396"
+        rpy="0 0 0" />
+      <mass
+        value="0.010382" />
+      <inertia
+        ixx="3.5251E-06"
+        ixy="1.1036E-09"
+        ixz="-1.5708E-08"
+        iyy="9.1297E-07"
+        iyz="4.9539E-09"
+        izz="2.7176E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ttr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ttr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ttr_joint"
+    type="revolute">
+    <origin
+      xyz="0.0402848517303517 0.0138302219579476 -0.000784642195971547"
+      rpy="0 0 0" />
+    <parent
+      link="ftr" />
+    <child
+      link="ttr" />
+    <axis
+      xyz="0.0194736704471687 0 0.999810370099907" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1"
+      velocity="2" />
+  </joint>
+  <link
+    name="cbr">
+    <inertial>
+      <origin
+        xyz="-0.010274 -0.011605 -0.021091"
+        rpy="0 0 0" />
+      <mass
+        value="0.0096676" />
+      <inertia
+        ixx="9.9564E-07"
+        ixy="4.3751E-08"
+        ixz="9.6499E-10"
+        iyy="1.0077E-06"
+        iyz="1.0864E-09"
+        izz="9.5797E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/cbr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.5 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/cbr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cbr_joint"
+    type="revolute">
+    <origin
+      xyz="0.0241479960646266 0.150303899569065 0.0393400002384201"
+      rpy="0 0 -1.57079629037889" />
+    <parent
+      link="base_link" />
+    <child
+      link="cbr" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1"
+      velocity="2" />
+  </joint>
+  <link
+    name="fbr">
+    <inertial>
+      <origin
+        xyz="0.019464 0.0079297 -0.023344"
+        rpy="0 0 0" />
+      <mass
+        value="0.022781" />
+      <inertia
+        ixx="1.5035E-06"
+        ixy="-1.7194E-06"
+        ixz="-1.8201E-15"
+        iyy="5.1158E-06"
+        iyz="-1.6263E-13"
+        izz="5.8654E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/fbr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.5 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/fbr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fbr_joint"
+    type="revolute">
+    <origin
+      xyz="-0.03754 -0.0094556 -0.021465"
+      rpy="1.5708 0 -2.2995" />
+    <parent
+      link="cbr" />
+    <child
+      link="fbr" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1"
+      velocity="2" />
+  </joint>
+  <link
+    name="tbr">
+    <inertial>
+      <origin
+        xyz="-8.1163E-05 -0.042901 -0.0244"
+        rpy="0 0 0" />
+      <mass
+        value="0.010382" />
+      <inertia
+        ixx="3.5254E-06"
+        ixy="1.0069E-09"
+        ixz="2.6696E-11"
+        iyy="9.1297E-07"
+        iyz="4.9746E-09"
+        izz="2.7173E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/tbr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/tbr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tbr_joint"
+    type="revolute">
+    <origin
+      xyz="0.039529 0.015882 0"
+      rpy="0 0 0" />
+    <parent
+      link="fbr" />
+    <child
+      link="tbr" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1"
+      velocity="2" />
+  </joint>
+</robot>
